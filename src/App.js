@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import IspisImena from "./Components/ispisImena";
+import IspisNovi from "./Components/ispisNovi";
+import SimpleLista from "./Components/simpleLista";
 function App() {
+  const imena = ["Marko", "Pero", "Iva", "Katarina", "Ana"];
+  const klijenti = [
+    { id: "f23", name: "Ivan", years: 30 },
+    { id: "f25", name: "Ana", years: 25 },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SimpleLista />
+      <IspisImena imena={imena} />
+      <IspisNovi imena={klijenti} />
     </div>
   );
 }
